@@ -1,0 +1,22 @@
+// Call by Address
+#include<stdio.h>
+
+void Display(int *ptr) // Issue ahe
+{
+    int iCnt = 0;
+
+    for(iCnt = 0; iCnt < 4; iCnt++)
+    {
+        printf("%d\n",*ptr);
+    }
+   
+
+}
+int main()
+{
+    int Arr[] = {10,20,30,40};
+
+    Display(Arr);        // Diaplay(100) base address
+   
+    return 0;
+}
