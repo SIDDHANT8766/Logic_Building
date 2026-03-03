@@ -1,0 +1,61 @@
+/*
+    iRow = 4;
+    iCol = 4;
+
+    Output =
+    
+    
+
+*/
+
+import java.util.Scanner;
+
+class Pattern
+{
+    // Filter for square matrix
+    public void Display(int iRow, int iCol)
+    {
+       int i = 0; int j = 0; 
+       
+       if(iRow != iCol)                   // Filter
+       {
+        System.out.println("Invalid input");
+        System.out.println("Row number and column number should be same");
+        return;
+       }
+
+       for(i=1; i <= iRow; i++)
+       {
+         for(j=1; j <= iCol; j++)
+         { 
+            if(j == i || i > j)
+            {
+               System.out.printf("*\t");   // instesd of Write %%  we write print
+            }
+        }
+          System.out.println();
+       }
+       
+
+    }
+}
+class program194
+{
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        int iValue1 = 0; int iValue2 = 0;
+
+        System.out.println("Enter number of Row:");
+        iValue1 =sobj.nextInt();
+
+        System.out.println("Enter number of Column:");
+        iValue2 =sobj.nextInt();
+
+        Pattern pobj = new Pattern();
+
+        pobj.Display(iValue1, iValue2);   
+
+    }
+}
